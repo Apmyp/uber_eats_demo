@@ -3,6 +3,8 @@ const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 const devMode = process.env.NODE_ENV !== "production";
 
@@ -26,9 +28,9 @@ module.exports = {
         use: ["pug-loader"]
       },
       {
-        test: /\.css$/,
+        test: /\.p?css$/,
         use: [
-          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          MiniCssExtractPlugin.loader,
           { loader: "css-loader", options: { importLoaders: 1 } },
           "postcss-loader"
         ]
@@ -66,6 +68,16 @@ module.exports = {
           }
         ]
       }
+    ]
+  },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: devMode
+      }),
+      new OptimizeCSSAssetsPlugin({})
     ]
   },
   plugins: [

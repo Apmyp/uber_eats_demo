@@ -1,0 +1,49 @@
+.button {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0;
+    text-align: center;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    font-size: 13px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    transition: background-color 0.2s;
+
+    &--default {
+        background-color: #fff;
+        color: #1D1D1D;
+        border: 1px solid #E0E0E0;
+
+        &:hover {
+            background-color: #f2f2f2;
+        }
+    }
+
+    &--primary {
+        background: #262626;
+        color: #fff;
+
+        &:hover {
+            background-color: #343434;
+        }
+    }
+
+    &--icon-basket {
+        display: flex;
+        align-items: center;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+a.button {
+    text-decoration: none;
+
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+}

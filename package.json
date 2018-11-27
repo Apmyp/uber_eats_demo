@@ -24,16 +24,23 @@
     "imagemin-svgo": "^7.0.0",
     "img-loader": "^3.0.1",
     "mini-css-extract-plugin": "^0.4.5",
+    "normalize.css": "^8.0.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
+    "postcss-nested": "^4.1.0",
     "postcss-preset-env": "^6.4.0",
     "pug": "^2.0.3",
     "pug-html-loader": "^1.1.5",
     "pug-loader": "^2.4.0",
     "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "flexboxgrid2": "^7.2.1"
   }
 }

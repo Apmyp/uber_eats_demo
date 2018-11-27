@@ -1,5 +1,21 @@
 extends ../layout
 
+block title
+  | UberEats
+
 block content
-  h1 Woah.
-  img(src=require('./logo.jpg'))
+  header.page_header
+    .page_header__container.container
+      .page_header__inner
+        .page_header__logo
+          img.page_header__logo-image(src=require('./images/logo.svg') alt="Логотип доставки Убер Итц")
+        .page_header__form.address_form
+          form.address_form__inner(aria-label="Адрес и время доставки")
+            input.address_form__input.input.input--small(value="ASAP")
+            .address_form__text to
+            input.address_form__input.input.input--icon-pointer(value="ul. Bolshaya Dmitrovka, 22" size="23")
+        .page_header__buttons
+          a.page_header__button.button.button--default(href="#") Sign In
+          a.page_header__button.button.button--primary(href="#") Register
+          a.page_header__button.button.button--icon-basket(href="#")
+            img(src=require('./images/basket.svg') alt="Иконка бумажного пакета")
