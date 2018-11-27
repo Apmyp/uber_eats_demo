@@ -19,3 +19,9 @@ block content
           a.page_header__button.button.button--primary(href="#") Register
           a.page_header__button.button.button--icon-basket(href="#")
             img(src=require('./images/basket.svg') alt="Иконка бумажного пакета")
+
+  .search_form
+    .search_form__container.container
+      .search_form__inner
+        form.search_form__form(role="search" aria-label="Форма поиска ресторана, кухни или блюд")
+          input.search_form__input.input.input--search.input--icon-search(placeholder="Поиск ресторана или кухни" aria-label="Поле поиска ресторана, кухни или блюд>")

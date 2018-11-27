@@ -12,8 +12,23 @@
         width: 66px;
     }
 
+    &--search {
+        width: 100%;
+        display: block;
+        border: none;
+
+        &::-webkit-input-placeholder {
+            color: #626262;
+        }
+    }
+
     &--icon-pointer {
         background: url(../images/pointer.svg) no-repeat 12px center;
         padding-left: 36px;
+    }
+
+    &--icon-search {
+        background: url(../images/search.svg) no-repeat 0px center;
+        padding-left: 30px;
     }
 }
