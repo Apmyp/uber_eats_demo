@@ -1,0 +1,128 @@
+main.page_main
+  .page_main__container.container
+    h1.page_main__header Рестораны Москвы
+    ul.page_main__restaurants.restaurants.row
+      mixin restaurant(image, image_2x, image_alt, title, price_range, tags, minutes)
+        li.restaurants__single.restaurant.col-xs-12.col-sm-6.col-md-6.col-lg-4
+          img.restaurant__image(src=image, srcset=image_2x + ' 2x', alt=image_alt)
+          h2.restaurant__header: a.restaurant__link(href="#")= title
+          p.restaurant__tags(aria-label="Ценовой диапозон и типы блюд в ресторане")
+            = price_range
+            |
+            | •
+            |
+            = tags.join(' • ')
+          p.restaurant__time(aria-label="Время за которое привозят еду")
+            = minutes.join('—')
+            |
+            | минут
+
+      +restaurant(
+      require('./uploads/first.jpg'),
+      require('./uploads/first@2x.jpg'),
+      '',
+      'Макдоналдс — Газетный',
+      '₽₽',
+      ['Бургеры'],
+      [25, 35]
+      )
+      +restaurant(
+      require('./uploads/kfc.jpg'),
+      require('./uploads/kfc@2x.jpg'),
+      '',
+      'DimSum & Co — ЦДМ',
+      '₽',
+      ['Китайская', 'Японская', 'Азиатская'],
+      [25, 35]
+      )
+      +restaurant(
+      require('./uploads/pizza.jpg'),
+      require('./uploads/pizza@2x.jpg'),
+      '',
+      'ДвижОК — Манежная',
+      '₽₽₽',
+      ['Японская'],
+      [25, 35]
+      )
+
+      +restaurant(
+      require('./uploads/sushi.jpg'),
+      require('./uploads/sushi@2x.jpg'),
+      '',
+      'НЯ — NHA',
+      '₽',
+      ['Азиатская'],
+      [25, 35]
+      )
+      +restaurant(
+      require('./uploads/first.jpg'),
+      require('./uploads/first@2x.jpg'),
+      '',
+      'Точка Дзы — Цветной',
+      '₽',
+      ['Европейская', 'Азиатская'],
+      [25, 35]
+      )
+      +restaurant(
+      require('./uploads/kfc.jpg'),
+      require('./uploads/kfc@2x.jpg'),
+      '',
+      'Cinnabon',
+      '₽₽₽',
+      ['Европейская', 'Американская'],
+      [25, 35]
+      )
+      +restaurant(
+      require('./uploads/pizza.jpg'),
+      require('./uploads/pizza@2x.jpg'),
+      '',
+      'PIZZELOVE',
+      '₽',
+      ['Вьетнамская'],
+      [25, 35]
+      )
+      +restaurant(
+      require('./uploads/sushi.jpg'),
+      require('./uploads/sushi@2x.jpg'),
+      '',
+      'Zю кафе — Тверская',
+      '₽₽₽',
+      ['Вьетнамская'],
+      [25, 35]
+      )
+      +restaurant(
+      require('./uploads/first.jpg'),
+      require('./uploads/first@2x.jpg'),
+      '',
+      'Bar BQ Cafe — Манежная',
+      '₽₽',
+      ['Капкейки', 'Десерты', 'Выпечка'],
+      [25, 35]
+      )
+      +restaurant(
+      require('./uploads/kfc.jpg'),
+      require('./uploads/kfc@2x.jpg'),
+      '',
+      'DimSum & Co — ЦДМ',
+      '₽₽₽',
+      ['Пицца'],
+      [25, 35]
+      )
+      +restaurant(
+      require('./uploads/pizza.jpg'),
+      require('./uploads/pizza@2x.jpg'),
+      '',
+      'ДвижОК — Манежная',
+      '₽',
+      ['Японская'],
+      [25, 35]
+      )
+      +restaurant(
+      require('./uploads/sushi.jpg'),
+      require('./uploads/sushi@2x.jpg'),
+      '',
+      'НЯ — NHA',
+      '₽₽',
+      ['Европейская'],
+      [25, 35]
+      )
