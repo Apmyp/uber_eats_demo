@@ -11,9 +11,9 @@ block content
           img.page_header__logo-image(src=require('./images/logo.svg') alt="Логотип доставки Убер Итц")
         .page_header__form.address_form
           form.address_form__inner(aria-label="Адрес и время доставки")
-            input.address_form__input.input.input--small(value="ASAP")
+            input.address_form__input.input.input--small(aria-label="Когда" value="ASAP")
             .address_form__text to
-            input.address_form__input.input.input--icon-pointer(value="ул. Большая Дмитровка, 22" size="23")
+            input.address_form__input.input.input--icon-pointer(aria-label="Куда" value="ул. Большая Дмитровка, 22" size="23")
         .page_header__buttons
           a.page_header__button.button.button--default(href="#") Вход
           a.page_header__button.button.button--primary(href="#") Регистрация
@@ -175,7 +175,7 @@ block content
           .row
             .col-xs-6.col-md-3
               form
-                select.select
+                select.select(aria-label="Язык сайта")
                   option English
                   option Russian
               .socials
@@ -210,10 +210,10 @@ block content
               ul.stores
                 li.stores__item
                   a.stores__link(href="#" target="_blank" rel="noopener referer")
-                    img(src=require('./images/app_store.png'))
+                    img(src=require('./images/app_store.png') alt="Баннер эпл эп стора")
                 li.stores__item
                   a.stores__link(href="#" target="_blank" rel="noopener referer")
-                    img(src=require('./images/google_play.png'))
+                    img(src=require('./images/google_play.png') alt="Баннер гугль плэй стора")
 
         .footer_module
           .row
