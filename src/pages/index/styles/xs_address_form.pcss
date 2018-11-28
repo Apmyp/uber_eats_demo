@@ -1,0 +1,31 @@
+.xs_address_form {
+    margin-top: 28px;
+
+    @media(min-width: 768px) {
+        display: none;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__group {
+        &:first-child {
+            margin-right: 16px;
+        }
+    }
+
+    &__label {
+        display: block;
+        font-size: 11px;
+        line-height: 1;
+        color: #626262;
+        margin-bottom: 8px;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+    }
+}

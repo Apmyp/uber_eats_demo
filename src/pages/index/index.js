@@ -7,6 +7,7 @@ import "./styles/footer_module.pcss";
 import "./styles/select.pcss";
 import "./styles/socials.pcss";
 import "./styles/stores.pcss";
+import "./styles/xs_address_form.pcss";
 import "./styles/footer_menu.pcss";
 import "./styles/page_header.pcss";
 import "./styles/search_form.pcss";

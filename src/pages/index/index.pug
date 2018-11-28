@@ -26,12 +26,23 @@ block content
         form.search_form__form(role="search" aria-label="Форма поиска ресторана, кухни или блюд")
           input.search_form__input.input.input--search.input--icon-search(placeholder="Поиск ресторана или кухни" aria-label="Поле поиска ресторана, кухни или блюд")
 
+  .xs_address_form
+    .xs_address_form__container.container
+      form.xs_address_form__inner(aria-label="Адрес и время доставки")
+        .xs_address_form__group
+          label.xs_address_form__label(for="time") Когда
+          input.xs_address_form__input.input.input--small(id="time" value="ASAP")
+        .xs_address_form__group
+          label.xs_address_form__label(for="address") Куда
+          input.xs_address_form__input.input.input--icon-pointer(id="address" value="ул. Большая Дмитровка, 22" size="23")
+
+
   main.page_main
     .page_main__container.container
       h1.page_main__header Рестораны Москвы
       ul.page_main__restaurants.restaurants.row
         mixin restaurant(image, image_2x, image_alt, title, price_range, tags, minutes)
-          li.restaurants__single.restaurant.col-xs-12.col-sm-6.col-md-4
+          li.restaurants__single.restaurant.col-xs-12.col-sm-6.col-md-6.col-lg-4
             img.restaurant__image(src=image, srcset=image_2x + ' 2x', alt=image_alt)
             h2.restaurant__header: a.restaurant__link(href="#")= title
             p.restaurant__tags(aria-label="Ценовой диапозон и типы блюд в ресторане")
@@ -55,28 +66,29 @@ block content
           [25, 35]
         )
         +restaurant(
-          require('./uploads/first.jpg'),
-          require('./uploads/first@2x.jpg'),
+          require('./uploads/kfc.jpg'),
+          require('./uploads/kfc@2x.jpg'),
           '',
-          'Макдоналдс — Газетный',
+          'DimSum & Co — ЦДМ',
           '₽',
           ['Китайская', 'Японская', 'Азиатская'],
           [25, 35]
         )
         +restaurant(
-          require('./uploads/first.jpg'),
-          require('./uploads/first@2x.jpg'),
+          require('./uploads/pizza.jpg'),
+          require('./uploads/pizza@2x.jpg'),
           '',
-          'Макдоналдс — Газетный',
+          'ДвижОК — Манежная',
           '₽₽₽',
           ['Японская'],
           [25, 35]
         )
+
         +restaurant(
-          require('./uploads/first.jpg'),
-          require('./uploads/first@2x.jpg'),
+          require('./uploads/sushi.jpg'),
+          require('./uploads/sushi@2x.jpg'),
           '',
-          'Макдоналдс — Газетный',
+          'НЯ — NHA',
           '₽',
           ['Азиатская'],
           [25, 35]
@@ -85,72 +97,72 @@ block content
           require('./uploads/first.jpg'),
           require('./uploads/first@2x.jpg'),
           '',
-          'Макдоналдс — Газетный',
+          'Точка Дзы — Цветной',
           '₽',
+          ['Европейская', 'Азиатская'],
+          [25, 35]
+        )
+        +restaurant(
+          require('./uploads/kfc.jpg'),
+          require('./uploads/kfc@2x.jpg'),
+          '',
+          'Cinnabon',
+          '₽₽₽',
           ['Европейская', 'Американская'],
           [25, 35]
         )
         +restaurant(
-          require('./uploads/first.jpg'),
-          require('./uploads/first@2x.jpg'),
+          require('./uploads/pizza.jpg'),
+          require('./uploads/pizza@2x.jpg'),
           '',
-          'Макдоналдс — Газетный',
+          'PIZZELOVE',
+          '₽',
+          ['Вьетнамская'],
+          [25, 35]
+        )
+        +restaurant(
+          require('./uploads/sushi.jpg'),
+          require('./uploads/sushi@2x.jpg'),
+          '',
+          'Zю кафе — Тверская',
           '₽₽₽',
-          ['Бургеры'],
+          ['Вьетнамская'],
           [25, 35]
         )
         +restaurant(
           require('./uploads/first.jpg'),
           require('./uploads/first@2x.jpg'),
           '',
-          'Макдоналдс — Газетный',
+          'Bar BQ Cafe — Манежная',
           '₽₽',
-          ['Бургеры'],
+          ['Капкейки', 'Десерты', 'Выпечка'],
           [25, 35]
         )
         +restaurant(
-          require('./uploads/first.jpg'),
-          require('./uploads/first@2x.jpg'),
+          require('./uploads/kfc.jpg'),
+          require('./uploads/kfc@2x.jpg'),
           '',
-          'Макдоналдс — Газетный',
-          '₽₽',
-          ['Бургеры'],
+          'DimSum & Co — ЦДМ',
+          '₽₽₽',
+          ['Пицца'],
           [25, 35]
         )
         +restaurant(
-          require('./uploads/first.jpg'),
-          require('./uploads/first@2x.jpg'),
+          require('./uploads/pizza.jpg'),
+          require('./uploads/pizza@2x.jpg'),
           '',
-          'Макдоналдс — Газетный',
-          '₽₽',
-          ['Бургеры'],
+          'ДвижОК — Манежная',
+          '₽',
+          ['Японская'],
           [25, 35]
         )
         +restaurant(
-          require('./uploads/first.jpg'),
-          require('./uploads/first@2x.jpg'),
+          require('./uploads/sushi.jpg'),
+          require('./uploads/sushi@2x.jpg'),
           '',
-          'Макдоналдс — Газетный',
+          'НЯ — NHA',
           '₽₽',
-          ['Бургеры'],
-          [25, 35]
-        )
-        +restaurant(
-          require('./uploads/first.jpg'),
-          require('./uploads/first@2x.jpg'),
-          '',
-          'Макдоналдс — Газетный',
-          '₽₽',
-          ['Бургеры'],
-          [25, 35]
-        )
-        +restaurant(
-          require('./uploads/first.jpg'),
-          require('./uploads/first@2x.jpg'),
-          '',
-          'Макдоналдс — Газетный',
-          '₽₽',
-          ['Бургеры'],
+          ['Европейская'],
           [25, 35]
         )
 
@@ -161,7 +173,7 @@ block content
           img(src=require('./images/white-logo.svg') alt="Логотип Убер Итц")
         .footer_module.footer_module--line
           .row
-            .col-xs-12.col-md-3
+            .col-xs-6.col-md-3
               form
                 select.select
                   option English
