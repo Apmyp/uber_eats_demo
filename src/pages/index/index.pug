@@ -13,10 +13,10 @@ block content
           form.address_form__inner(aria-label="Адрес и время доставки")
             input.address_form__input.input.input--small(value="ASAP")
             .address_form__text to
-            input.address_form__input.input.input--icon-pointer(value="ul. Bolshaya Dmitrovka, 22" size="23")
+            input.address_form__input.input.input--icon-pointer(value="ул. Большая Дмитровка, 22" size="23")
         .page_header__buttons
-          a.page_header__button.button.button--default(href="#") Sign In
-          a.page_header__button.button.button--primary(href="#") Register
+          a.page_header__button.button.button--default(href="#") Вход
+          a.page_header__button.button.button--primary(href="#") Регистрация
           a.page_header__button.button.button--icon-basket(href="#")
             img(src=require('./images/basket.svg') alt="Иконка бумажного пакета")
 
@@ -24,4 +24,132 @@ block content
     .search_form__container.container
       .search_form__inner
         form.search_form__form(role="search" aria-label="Форма поиска ресторана, кухни или блюд")
-          input.search_form__input.input.input--search.input--icon-search(placeholder="Поиск ресторана или кухни" aria-label="Поле поиска ресторана, кухни или блюд>")
+          input.search_form__input.input.input--search.input--icon-search(placeholder="Поиск ресторана или кухни" aria-label="Поле поиска ресторана, кухни или блюд")
+
+  main.page_main
+    .page_main__container.container
+      h1.page_main__header Рестораны Москвы
+      ul.page_main__restaurants.restaurants.row
+        mixin restaurant(image, image_2x, image_alt, title, price_range, tags, minutes)
+          li.restaurants__single.restaurant.col-xs-12.col-sm-6.col-md-4
+            img.restaurant__image(src=image, srcset=image_2x + ' 2x', alt=image_alt)
+            h2.restaurant__header: a.restaurant__link(href="#")= title
+            p.restaurant__tags(aria-label="Ценовой диапозон и типы блюд в ресторане")
+              = price_range
+              |
+              | •
+              |
+              = tags.join(' • ')
+            p.restaurant__time(aria-label="Время за которое привозят еду")
+              = minutes.join('—')
+              |
+              | минут
+
+        +restaurant(
+          require('./uploads/first.jpg'),
+          require('./uploads/first@2x.jpg'),
+          '',
+          'Макдоналдс — Газетный',
+          '₽₽',
+          ['Бургеры'],
+          [25, 35]
+        )
+        +restaurant(
+          require('./uploads/first.jpg'),
+          require('./uploads/first@2x.jpg'),
+          '',
+          'Макдоналдс — Газетный',
+          '₽',
+          ['Китайская', 'Японская', 'Азиатская'],
+          [25, 35]
+        )
+        +restaurant(
+          require('./uploads/first.jpg'),
+          require('./uploads/first@2x.jpg'),
+          '',
+          'Макдоналдс — Газетный',
+          '₽₽₽',
+          ['Японская'],
+          [25, 35]
+        )
+        +restaurant(
+          require('./uploads/first.jpg'),
+          require('./uploads/first@2x.jpg'),
+          '',
+          'Макдоналдс — Газетный',
+          '₽',
+          ['Азиатская'],
+          [25, 35]
+        )
+        +restaurant(
+          require('./uploads/first.jpg'),
+          require('./uploads/first@2x.jpg'),
+          '',
+          'Макдоналдс — Газетный',
+          '₽',
+          ['Европейская', 'Американская'],
+          [25, 35]
+        )
+        +restaurant(
+          require('./uploads/first.jpg'),
+          require('./uploads/first@2x.jpg'),
+          '',
+          'Макдоналдс — Газетный',
+          '₽₽₽',
+          ['Бургеры'],
+          [25, 35]
+        )
+        +restaurant(
+          require('./uploads/first.jpg'),
+          require('./uploads/first@2x.jpg'),
+          '',
+          'Макдоналдс — Газетный',
+          '₽₽',
+          ['Бургеры'],
+          [25, 35]
+        )
+        +restaurant(
+          require('./uploads/first.jpg'),
+          require('./uploads/first@2x.jpg'),
+          '',
+          'Макдоналдс — Газетный',
+          '₽₽',
+          ['Бургеры'],
+          [25, 35]
+        )
+        +restaurant(
+          require('./uploads/first.jpg'),
+          require('./uploads/first@2x.jpg'),
+          '',
+          'Макдоналдс — Газетный',
+          '₽₽',
+          ['Бургеры'],
+          [25, 35]
+        )
+        +restaurant(
+          require('./uploads/first.jpg'),
+          require('./uploads/first@2x.jpg'),
+          '',
+          'Макдоналдс — Газетный',
+          '₽₽',
+          ['Бургеры'],
+          [25, 35]
+        )
+        +restaurant(
+          require('./uploads/first.jpg'),
+          require('./uploads/first@2x.jpg'),
+          '',
+          'Макдоналдс — Газетный',
+          '₽₽',
+          ['Бургеры'],
+          [25, 35]
+        )
+        +restaurant(
+          require('./uploads/first.jpg'),
+          require('./uploads/first@2x.jpg'),
+          '',
+          'Макдоналдс — Газетный',
+          '₽₽',
+          ['Бургеры'],
+          [25, 35]
+        )

@@ -1,0 +1,52 @@
+.restaurant {
+    box-sizing: border-box;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 16px;
+
+    &__image {
+        max-width: 100%;
+    }
+
+    &__header {
+        margin: 12px 0 0 0;
+        line-height: 24px;
+        font-size: 16px;
+        color: #1D1D1D;
+        font-weight: 400;
+    }
+
+    &__tags {
+        margin: 4px 0 0 0;
+        line-height: 21px;
+        font-size: 14px;
+        color: #626262;
+    }
+
+    &__time {
+        margin: 4px 0 0 0;
+        line-height: 21px;
+        font-size: 13px;
+        color: #1D1D1D;
+    }
+
+    &__link {
+        text-decoration: none;
+        line-height: inherit;
+        font-size: inherit;
+        color: inherit;
+
+        &:focus, &:hover {
+            text-decoration: none;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
