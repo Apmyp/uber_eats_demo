@@ -153,3 +153,61 @@ block content
           ['Бургеры'],
           [25, 35]
         )
+
+  footer.page_footer
+    .page_footer__container.container
+      .page_footer__inner
+        .footer_module.footer_module--line
+          img(src=require('./images/white-logo.svg') alt="Логотип Убер Итц")
+        .footer_module.footer_module--line
+          .row
+            .col-xs-12.col-md-3
+              form
+                select.select
+                  option English
+                  option Russian
+              .socials
+                .socials__header
+                  span.socials__sign #
+                  span.socials__name UberEats
+                ul.socials__links
+                  li.socials__item
+                    a.socials__link(href="#" target="_blank" rel="noopener noreferer")
+                      img(src=require('./images/facebook.svg') alt="Логотип Фэйсбука")
+                  li.socials__item
+                    a.socials__link(href="#" target="_blank" rel="noopener noreferer")
+                      img(src=require('./images/twitter.svg') alt="Логотип Твиттера")
+                  li.socials__item
+                    a.socials__link(href="#" target="_blank" rel="noopener noreferer")
+                      img(src=require('./images/instagram.svg') alt="Логотип Инстаграма")
+            .col-xs-12.col-md-3.col-md-offset-1
+              ul.footer_menu
+                li.footer_menu__item: a.footer_menu__link(href="#") About UberEats
+                li.footer_menu__item: a.footer_menu__link(href="#") Become a Delivery Partner
+                li.footer_menu__item: a.footer_menu__link(href="#") Become a Restaurant Partner
+            .col-xs-12.col-md-3.col-md-offset-1
+              ul.footer_menu
+                li.footer_menu__item: a.footer_menu__link(href="#") See all cities
+                li.footer_menu__item: a.footer_menu__link(href="#") Pricing
+                li.footer_menu__item: a.footer_menu__link(href="#") Help
+                li.footer_menu__item: a.footer_menu__link(href="#") FAQs
+
+        .footer_module.footer_module--line
+          .row
+            .col-xs-12.col-sm-8.col-sm-offset-4
+              ul.stores
+                li.stores__item
+                  a.stores__link(href="#" target="_blank" rel="noopener referer")
+                    img(src=require('./images/app_store.png'))
+                li.stores__item
+                  a.stores__link(href="#" target="_blank" rel="noopener referer")
+                    img(src=require('./images/google_play.png'))
+
+        .footer_module
+          .row
+            .col-xs-12.col-sm-3
+              p.footer_module__text © 2017 Uber Technologies Inc.
+            .col-xs-12.col-sm-3.col-sm-offset-1
+              a.footer_module__link(href="#") Privacy
+            .col-xs-12.col-sm-3.col-sm-offset-1
+              a.footer_module__link(href="#") Terms
