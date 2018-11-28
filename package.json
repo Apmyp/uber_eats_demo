@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --open",
-    "build": "NODE_ENV=production webpack --mode production"
+    "build": "NODE_ENV=production webpack --mode production",
+    "deploy": "yarn build && now alias $(now dist --public --name uber-eats-apmyp --token $NOW_TOKEN) uber-eats-apmyp --token $NOW_TOKEN"
   },
   "keywords": [],
   "author": "",
