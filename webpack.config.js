@@ -85,6 +85,7 @@ module.exports = {
     ...pages.map(page => new HtmlWebpackPlugin({
       filename: `${page}.html`,
       template: `src/pages/${page}/${page}.pug`,
+      favicon: 'src/pages/favicon.ico'
     })),
     new MiniCssExtractPlugin({
       filename: devMode ? "[name].css" : "[name].[hash].css"
